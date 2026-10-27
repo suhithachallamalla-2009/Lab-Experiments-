@@ -1,0 +1,495 @@
+week 1
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+
+    printf("Enter a number: ");
+    scanf("%d", &a);
+
+    printf("The number is %d", a);
+
+}
+
+
+week 2
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, sum;
+    float average;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    sum = a + b + c;
+    average = sum / 3.0;
+
+    printf("Sum = %d\n", sum);
+    printf("Average = %.2f\n", average);
+
+}
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float f, c;
+
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%f", &f);
+    c = (f - 32) * 5.0 / 9.0;
+    printf("Celsius = %.2f\n", c);
+
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &c);
+    f = (c * 9.0 / 5.0) + 32;
+    printf("Fahrenheit = %.2f\n", f);
+
+}
+
+
+
+s=P×R×T/100
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float p, r, t, si;
+
+    printf("Enter principal, rate and time: ");
+    scanf("%f %f %f", &p, &r, &t);
+
+    si = (p * r * t) / 100;
+printf("Simple Interest = %.2f\n", si);
+
+}
+
+
+
+
+week 3
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float n;
+
+    printf("Enter a number: ");
+    scanf("%f", &n);
+
+    if (n >= 0)
+        printf("Square root = %.2f\n", sqrt(n));
+    else
+        printf("Square root is not real\n");
+
+}
+
+
+
+
+CI=P(1+R/100)^T-P
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float p, r, t, amount, ci;
+
+    printf("Enter principal, rate and time: ");
+    scanf("%f %f %f", &p, &r, &t);
+
+    amount = p * pow(1 + r / 100, t);
+    ci = amount - p;
+
+    printf("Compound Interest = %.2f\n", ci);
+    printf("Total Amount = %.2f\n", amount);
+
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a, b, c, s, area;
+
+    printf("Enter three sides of triangle: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if (a <= 0 || b <= 0 || c <= 0 ||
+        a + b <= c || a + c <= b || b + c <= a)
+    {
+        printf("Invalid triangle\n");
+    }
+    else
+    {
+        s = (a + b + c) / 2;
+        area = sqrt(s * (s-a) * (s-b) * (s-c));
+
+        printf("Area = %.2f\n", area);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float speed, time, distance;
+
+    printf("Enter speed and time: ");
+    scanf("%f %f", &speed, &time);
+
+    distance = speed * time;
+
+    printf("Distance = %.2f\n", distance);
+
+}
+
+
+
+
+
+
+
+week 4
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float A, B, C, D, E, F, G;
+
+    printf("Enter A, B, C, D, E, F, G: ");
+    scanf("%f %f %f %f %f %f %f",
+          &A, &B, &C, &D, &E, &F, &G);
+
+    printf("a = %.2f\n", A + B*C + (D*E) + F*G);
+    printf("b = %.2f\n", A/B*C - B + A*D/3);
+
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, max;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    max = (a > b) ?
+          ((a > c) ? a : c) :
+          ((b > c) ? b : c);
+
+    printf("Maximum = %d\n", max);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int m1, m2, m3, m4, m5, total;
+    float average;
+
+    printf("Enter marks of five subjects: ");
+    scanf("%d %d %d %d %d",
+          &m1, &m2, &m3, &m4, &m5);
+
+    total = m1 + m2 + m3 + m4 + m5;
+    average = total / 5.0;
+
+    printf("Total = %d\n", total);
+    printf("Average = %.2f\n", average);
+
+}
+
+
+
+
+
+
+
+week 5
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d, max, min;
+
+    printf("Enter four numbers: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    max = min = a;
+
+    if (b > max) max = b;
+    if (c > max) max = c;
+    if (d > max) max = d;
+
+    if (b < min) min = b;
+    if (c < min) min = c;
+    if (d < min) min = d;
+
+    printf("Maximum = %d\n", max);
+    printf("Minimum = %d\n", min);
+
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float units, bill;
+
+    printf("Enter units consumed: ");
+    scanf("%f", &units);
+
+    if (units < 0)
+    {
+        printf("Invalid units");
+    }
+    else if (units <= 100)
+    {
+        bill = units * 1.50;
+        printf("Electricity Bill = Rs. %.2f\n", bill);
+    }
+    else if (units <= 200)
+    {
+        bill = units * 2.50;
+        printf("Electricity Bill = Rs. %.2f\n", bill);
+    }
+    else if (units <= 500)
+    {
+        bill = units * 4.00;
+        printf("Electricity Bill = Rs. %.2f\n", bill);
+    }
+    else
+    {
+        bill = units * 6.00;
+        printf("Electricity Bill = Rs. %.2f\n", bill);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a, b, c, d, r1, r2, real, imag;
+
+    printf("Enter a, b and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if (a == 0)
+    {
+        printf("Not a quadratic equation");
+        return 0;
+    }
+
+    d = b*b - 4*a*c;
+
+    if (d > 0)
+    {
+        r1 = (-b + sqrt(d)) / (2*a);
+        r2 = (-b - sqrt(d)) / (2*a);
+
+        printf("Root 1 = %.2f\n", r1);
+        printf("Root 2 = %.2f\n", r2);
+    }
+    else if (d == 0)
+    {
+        r1 = -b / (2*a);
+        printf("Equal roots = %.2f\n", r1);
+    }
+    else
+    {
+        real = -b / (2*a);
+        imag = sqrt(-d) / (2*fabs(a));
+
+        printf("Root 1 = %.2f + %.2fi\n", real, imag);
+        printf("Root 2 = %.2f - %.2fi\n", real, imag);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float a, b;
+    int choice;
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &a, &b);
+
+    printf("\n1. Addition");
+    printf("\n2. Subtraction");
+    printf("\n3. Multiplication");
+    printf("\n4. Division");
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+        case 1:
+            printf("Result = %.2f", a + b);
+            break;
+
+        case 2:
+            printf("Result = %.2f", a - b);
+            break;
+
+        case 3:
+            printf("Result = %.2f", a * b);
+            break;
+
+        case 4:
+            if (b == 0)
+                printf("Division by zero is not possible");
+            else
+                printf("Result = %.2f", a / b);
+            break;
+
+        default:
+            printf("Invalid option");
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if (year <= 0)
+        printf("Invalid year");
+    else if (year % 400 == 0)
+        printf("Leap year");
+    else if (year % 100 == 0)
+        printf("Not a leap year");
+    else if (year % 4 == 0)
+        printf("Leap year");
+    else
+        printf("Not a leap year");
+
+}
+
+
